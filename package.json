@@ -1,0 +1,27 @@
+{
+  "name": "expense-tracker-mobile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "prebuild": "expo prebuild --platform android",
+    "apk:release": "cd android && ./gradlew assembleRelease",
+    "test:parse": "node --test src/lib/smsParse.test.js"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "android-sms": "file:./modules/android-sms",
+    "expo": "~57.0.26",
+    "expo-auth-session": "~7.0.10",
+    "expo-constants": "~18.0.13",
+    "expo-dev-client": "~6.0.20",
+    "expo-linking": "~8.0.11",
+    "expo-secure-store": "~15.0.8",
+    "expo-status-bar": "~3.0.9",
+    "expo-web-browser": "~15.0.10",
+    "react": "19.2.3",
+    "react-native": "0.86.3"
+  }
+}
